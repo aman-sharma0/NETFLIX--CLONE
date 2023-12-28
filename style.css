@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+/* ------------header w/ nav---------- */
+header {
+  width: 100%;
+  height: 644px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/assests/images/header-image.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+}
+
+nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.language-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+}
+
+.language-btn2 {
+  display: none;
+}
+
+.language-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+.header-content {
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  gap: 23px;
+  padding: 0 30px;
+}
+
+.header-content h1 {
+  font-weight: bolder;
+  font-size: 48px;
+  text-align: center;
+}
+
+.header-content h3 {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+.header-content p {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.email-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.email-signup input {
+  width: 30vw;
+  background-color: #8080808b;
+  color: #fff;
+  padding: 10px 60px 10px 7px;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.start-btn {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: white;
+  padding: 10px 24px;
+  font-size: 15px;
+  border-radius: 4px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.separation {
+  height: 7px;
+  background-color: #505050;
+}
+
+/* ----------feature pages-------- */
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
+  margin: auto;
+}
+
+.first-text {
+  display: flex;
+  flex-direction: column;
+}
+.first-text h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.first-text p {
+  font-size: 18px;
+}
+.first-media {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  bottom: 10px;
+}
+.first-media img {
+  width: 555px;
+  position: relative;
+  z-index: 10;
+}
+.first-media video {
+  position: absolute;
+  top: 51px;
+  right: 0;
+}
+
+/* ------------faq----------- */
+.faq {
+  background: black;
+  color: white;
+  padding: 34px;
+}
+.faq h2 {
+  text-align: center;
+  font-size: 48px;
+}
+
+.accordian {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+.accordian li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.accordian li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.accordian .content {
+  background-color: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0; /*initially they will be hidden*/
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordian input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accordian input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+/* .faqbox:hover {
+  background-color: #414141;
+  color: white;
+}
+
+.faqbox {
+  transition: all 1s ease-out;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  padding: 24px;
+  max-width: 60vw;
+  margin: 34px auto;
+  cursor: pointer;
+} */
+
+footer {
+  color: white;
+  max-width: 60vw;
+  margin: auto;
+  padding: 60px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+}
+
+footer .questions {
+  padding: 34px 0;
+  margin: auto;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.footer a {
+  font-size: 14px;
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  nav {
+    max-width: 90vw;
+  }
+
+  .logo {
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  nav button {
+    padding: 7px 10px;
+  }
+
+  .language-btn {
+    display: none;
+  }
+  .language-btn2 {
+    display: inline;
+  }
+
+  .language-btn2 .down-icon{
+    margin-bottom: 3px;
+    width: 6px;
+
+  }
+  
+
+  .first {
+    flex-wrap: wrap;
+  }
+
+  .first-media img {
+    width: 305px;
+  }
+
+  .first-media video {
+    width: 305px;
+  }
+
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content h3 {
+    font-size: 18px;
+  }
+
+  .header-content p {
+    font-size: 18px;
+  }
+
+  .header-content .start-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .first {
+    padding: 30px 0;
+  }
+  .first-text h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .faq h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  footer {
+    max-width: 90vw;
+    padding: 75px 0;
+  }
+
+  .footer-item {
+    align-items: center;
+  }
+  .questions {
+    text-align: center;
+  }
+  .email-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .email-signup input {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
